@@ -1,0 +1,34 @@
+@mixin animation($detail){
+    -webkit-animation: $detail;
+       -moz-animation: $detail;
+        -ms-animation: $detail;
+            animation: $detail;
+}
+
+@mixin transition($detail){
+    -webkit-transition: $detail;
+       -moz-transition: $detail;
+        -ms-transition: $detail;
+            transition: $detail;
+}
+
+@mixin transform($detail){
+    -webkit-transform: $detail;
+       -moz-transform: $detail;
+        -ms-transform: $detail;
+            transform: $detail;
+}
+
+@mixin perspective($detail){
+    -webkit-perspective: $detail;
+       -moz-perspective: $detail;
+        -ms-perspective: $detail;
+            perspective: $detail;
+}
+
+@mixin transform-style($detail){
+    -webkit-transform-style: $detail;
+       -moz-transform-style: $detail;
+        -ms-transform-style: $detail;
+            transform-style: $detail;
+}

@@ -36,8 +36,7 @@ height: 40px;}
     background-color: transparent;
     text-align: center; 
     color: #DB5E5E;
-    -webkit-animation: colorize 2s cubic-bezier(0, 0, .78, .36) 1;
-    animation: colorize 2s cubic-bezier(0, 0, .78, .36) 1;
+    @include animation(colorize 2s cubic-bezier(0, 0, .80, .4) 1);
 }
 
 .sectionA{
@@ -127,9 +126,7 @@ height: 40px;}
 }
 
 .fa{
-    transition: transform 1s;
-    -webkit-transition: 1s;
-    -moz-transition:1s;
+    @include transition(1s);
 }
 
 .carousel{
@@ -207,14 +204,10 @@ background:
 
 
 .odd{background: -webkit-linear-gradient(left, #B9B9B9, #D9D9D9, #D9D9D9, #B9B9B9); border-radius: 15px; margin-top: 5px;
-    transition: 1s;
-    -webkit-transition: 1s;
-    -moz-transition:1s;}
+@include transition(1s);}
 .odd:hover{background: -webkit-linear-gradient(left, #D9D9D9, #D9D9D9); border-radius: 15px; margin-top: 5px;}
 .even{background: -webkit-linear-gradient(left, #CDCDCD, #EDEDED, #EDEDED, #CDCDCD); border-radius: 15px; margin-top: 5px;
-    transition: 1s;
-    -webkit-transition: 1s;
-    -moz-transition:1s;}
+@include transition(1s);}
 .even:hover{background: -webkit-linear-gradient(left, #EDEDED, #EDEDED); border-radius: 15px; margin-top: 5px;}
 .partialSelect{background-color: #373737; border-radius: 15px; border-color: transparent; color: #E9E9E9;
 }
