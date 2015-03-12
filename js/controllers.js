@@ -35,9 +35,9 @@ movieApp.filter("swapFilter", function() {
 
 movieApp.controller('partialController', ['$scope', function($scope) {
     $scope.partials =
-        [ { name: 'LIST', url: '../partials/list.html'},
-          { name: 'GALLERY', url: '../partials/gallery.html'},
-          { name: 'DETAILS', url: '../partials/details.html'}];
+        [ { name: 'LIST', url: './partials/list.html'},
+          { name: 'GALLERY', url: './partials/gallery.html'},
+          { name: 'DETAILS', url: './partials/details.html'}];
     $scope.partial = $scope.partials[0];
     $scope.showDetail = function (movieID) {
         $scope.partial = $scope.partials[2];
