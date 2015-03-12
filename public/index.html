@@ -2,59 +2,135 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>MP2 Starter</title>
+  <title>Inky Lab V0.2</title>
   <script src="./lib/angular/angular.min.js"></script>
   <script src="./js/controllers.js"></script>
   <link rel="stylesheet" href="./css/styles.css">
   <link rel="stylesheet" href="./foundation/css/foundation.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.4.1/slick-theme.css"/>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.4.1/slick.css"/>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 </head>
 
 
-<body>
+<body class="stableImage">
+    <div class = "sticky alwaysOnTop">
+        <nav class="top-bar largeBar" data-topbar role="navigation">
+          <ul class="title-area">
+            <li class="name mainNav">
+              <h1><a href="#">Inky Lab</a></h1>
+            </li>
+          </ul>
 
-	<nav class="top-bar" data-topbar role="navigation">
-	  <ul class="title-area">
-	    <li class="name">
-	      <h1><a href="#">MP2</a></h1>
-	    </li>
-	     <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
-	    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
-	  </ul>
+          <section class="top-bar-section">
+            <!-- Right Nav Section -->
+            <ul class="right">
+                <li id="carouselNav"><a href="#carousel">Early Stage Samples</a></li>
+                <li id="aboutNav"><a href="#about">About & Contact</a></li>
+              <!--<li class="has-dropdown">
+                <a href="#">NAVIGATION</a>
+                <ul class="dropdown">
+                  <li><a href="#carousel">Early Stage Samples</a></li>
+                  <li><a href="#about">About & Contact</a></li>
+                </ul>
+              </li>-->
+            </ul>
 
-	  <section class="top-bar-section">
-	    <!-- Left Nav Section -->
-	    <ul class="left">
-	      <li><a href="https://courses.engr.illinois.edu/cs498rk1/index.html">CS498RK</a></li>
-	    </ul>
-	  </section>
-	</nav>
-
-	<div class="row" ng-app = "demoApp">
-		<div class="panel small-centered columns small-12 medium-4">
-    	<input id="nameInput" ng-model="name" placeholder="Your Name" autofocus>
-	
-		<h3>Hello, {{name}}</h3>
-
-		</div>
+            <!-- Left Nav Section -->
+            <ul class="left">
+              <li class="mainNav"><a href="#">V2.0</a></li>
+            </ul>
+          </section>
+        </nav>
+    </div>
+    
+    <div id = "nav_padding"> 
+            <div id = "nav_padding_content">
+                <video width="100%" height="auto" autoplay loop>
+                    <source src="data/video/Rain_Drops.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div id = "nav_padding_screen"> 
+                <div id = "nav_padding_screen_doodle"> Interactive Behaviour Modeling Gallery 
+                    <br>
+                    <br> 
+                    <i class="fa fa-arrow-circle-o-down fa-3x"></i> 
+                </div>
+            </div>
+        </div>
+    
+    <div class="sections">
+	<div class="row sectionA" id="carousel">
+        <div class="blueprint_doodle" style="    font-size: 2.5em;">
+            Early Samples
+        </div>
+        <div class="carousel-disp slider">
+            <div class="carouselItem"><iframe id='ifr' width=100% height=100% scrolling='no' 
+                    style='background: url(http://mcb419.processingtogether.com/static/img/jun09/pad/connectingbar.gif) no-repeat center 60px;' 
+                    src='http://mcb419.processingtogether.com/sp/pad/iframe/ro.BTcFdS$0zJ2pVg/rev.22?autostart=0'></iframe></div>
+            <div class="carouselItem"><iframe id='ifr' width=100% height=100% scrolling='no' 
+                    style='background: url(http://mcb419.processingtogether.com/static/img/jun09/pad/connectingbar.gif) no-repeat center 60px;' 
+                    src='http://mcb419.processingtogether.com/sp/pad/iframe/ro.BaqwT1qrvL$0Wz/rev.216?autostart=0'></iframe></div>
+            <div class="carouselItem"><iframe id='ifr' width=100% height=100% scrolling='no' 
+                    style='background: url(http://mcb419.processingtogether.com/static/img/jun09/pad/connectingbar.gif) no-repeat center 60px;' 
+                    src='http://mcb419.processingtogether.com/sp/pad/iframe/ro.BLOocy0-q02vSx/rev.324?autostart=0'></iframe></div>
+            <div class="carouselItem"><iframe id='ifr' width=100% height=100% scrolling='no' 
+                    style='background: url(//mcb419.processingtogether.com/static/img/jun09/pad/connectingbar.gif) no-repeat center 60px;' 
+                    src='//mcb419.processingtogether.com/sp/pad/iframe/ro.B08VA9y79hgsnS/rev.255?autostart=0'></iframe></div>
+        
+        </div>
+        <div class="slider carousel">
+            <div>Braitenberg Vehicles</div>
+            <div>Different Cursor Seeking Flocks</div>
+            <div>Wandering Bugs</div>
+            <div>Cluster Distributuin</div>
+        </div>
 	</div>
-	<div class="row">
-		<div class="alert columns small-12 large-6">
-			<div><img src="http://lorempixel.com/400/200/cats" /></div>
-
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit velit temporibus, fugit recusandae aliquid officiis molestias possimus reprehenderit quos. Facere dolores, nulla optio recusandae. Voluptatibus aut esse nulla saepe sit ut amet, neque officia officiis quam ea ex adipisci, quaerat, eligendi veniam iste temporibus. Aperiam ea quos fugiat provident, voluptatum reiciendis mollitia voluptates, odio quam at, deserunt animi voluptas odit aliquid saepe voluptate distinctio excepturi. Deserunt, id esse fuga cum accusantium eos obcaecati odit veritatis molestias illum sequi repellat, quisquam quasi architecto velit blanditiis perferendis, nulla eligendi non laboriosam. Eligendi sint, voluptatem ipsam dolore eum temporibus dicta, quaerat ea molestias placeat, asperiores minima sit explicabo! Repellat qui ducimus ipsum. Dignissimos at, aliquid vitae asperiores omnis provident voluptatibus, itaque delectus. Porro corrupti vel culpa, delectus in doloremque nam ratione aliquid ullam non iusto magnam, repudiandae, magni a quasi voluptatum inventore exercitationem quibusdam sint autem totam ex quia possimus. Similique ad fugiat eligendi magnam ab, ex nulla unde eos, tempora quis consequatur maxime inventore perferendis voluptatem non nam dignissimos voluptatum dolor quasi quidem molestias maiores doloribus. Omnis ipsa fugit amet! Eum repellat deleniti fuga omnis in maiores rem iusto, qui quasi ipsum illum odit laudantium molestiae, nostrum ipsam fugit animi atque! Non.
+    <div class="row sectionB" id="about">
+        <div class="columns small-12 modalLink">
+            <a class="modalLink" href="#" data-reveal-id="modal">Interested? Click for some related info. </a>
+        </div>
+        <div id="modal" class="reveal-modal modal" data-reveal>
+          <h2>Thanks For Visiting</h2>
+            <p>Here is a link to An artificial Insect by Beer, Randall</p>
+            <a href="http://www.jstor.org/stable/29774478?seq=1#page_scan_tab_contents">An artificial Insect</a>
+          <a class="close-reveal-modal">&#215;</a>
+        </div>
+		<div class="columns small-4 medium-4 large-4 socialIcon">
+            <i class="fa fa-twitter fa-5x"></i>
+            <br><br><br><br>
+            Connect on Twitter (Soon)
 		</div>
-		<div class="columns small-12 large-6">
-	  	<div><img src="http://lorempixel.com/400/200/nature" />	</div>
-	  	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt nobis facere sint placeat necessitatibus reprehenderit amet quas minima beatae illo nemo labore, maxime adipisci, accusamus voluptates repudiandae quia, ut excepturi ea quis obcaecati molestias error architecto unde? Hic vel facere porro magnam ipsam omnis eos ducimus, architecto velit beatae modi natus sunt suscipit quo optio qui repellat, blanditiis consequuntur. Fuga omnis porro quis inventore in voluptatum veritatis illum beatae rem. Labore nam saepe cupiditate quod, itaque quidem libero, quas tempore incidunt, quos earum repudiandae recusandae quia voluptas ducimus inventore, expedita. Alias minima, commodi aut, aspernatur laborum quae mollitia pariatur suscipit ad accusamus a ipsam fuga necessitatibus voluptas esse error reprehenderit provident. Sequi architecto ipsum qui enim labore sunt incidunt ullam pariatur. Minus porro error ipsa perferendis exercitationem debitis dicta asperiores nostrum cum voluptas qui dolores odit numquam incidunt cumque eos nemo architecto repudiandae adipisci, eius ut, aut suscipit minima perspiciatis consectetur. Ratione quisquam neque voluptatem? Qui, aspernatur iste quaerat iure. Debitis nobis minus animi mollitia libero temporibus perferendis ratione, inventore ullam, eos ut porro, velit quibusdam rerum possimus, ex! Quidem consectetur obcaecati ad veritatis. Velit illum aliquid tenetur, nisi illo quaerat labore nemo id sequi eveniet consequuntur. Voluptate, similique, rem!</div>
+		<div class="columns small-4 medium-4 large-4 socialIcon">
+            <i class="fa fa-github fa-5x"></i>
+            <br><br><br><br>
+            Connect on GitHub
+        </div>
+        <div class="columns small-4 medium-4 large-4 socialIcon">
+            <i class="fa fa-linkedin fa-5x"></i>
+            <br><br><br><br>
+            Connect on LinkedIn
+        </div>
+        <div class="columns small-12" id = 'siteinfo'> ------- Inky Glass 2015 -------</div>
 	</div>
- 
-
-
-  <script src="./js/script.js"></script>
+	</div>
+    </div>
+    <div id = "inkdrop"></div> 
+    <footer>
+    </footer>
   <script src="./lib/jquery-2.1.3.min/index.js"></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.4.1/slick.min.js"></script>
   <script src="./foundation/js/foundation.min.js"></script>
+  <script src="./js/script.js"></script>
   <script src="http://localhost:35729/livereload.js"></script>
+    <script>
+      /*$(document).foundation();
+    jQuery(function($){
+       // $ = jQuery regardless of what it means
+       // outside this DOM ready function
+    });*/
+    </script>
 </body>
 </html>

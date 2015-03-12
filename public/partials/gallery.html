@@ -1,0 +1,61 @@
+<div ng-controller="movieController">
+    <div ng-controller='galleryController'>
+        <ul class="small-block-grid-4 medium-block-grid-6">
+            <li style="color: #DDDDDD; display: inline-block; height: 2em; line-height: 2em; vertical-align: middle;" 
+                class=" genrebutton" ng-click="switchOnGenre(1)">All</li>
+            <li style="color: #DDDDDD; display: inline-block; height: 2em; line-height: 2em; vertical-align: middle;" 
+                class=" genrebutton" ng-click="switchOnGenre(2)">Action</li>
+            <li style="color: #DDDDDD; display: inline-block; height: 2em; line-height: 2em; vertical-align: middle;" 
+                class=" genrebutton" ng-click="switchOnGenre(3)">Adventure</li>
+            <li style="color: #DDDDDD; display: inline-block; height: 2em; line-height: 2em; vertical-align: middle;" 
+                class=" genrebutton" ng-click="switchOnGenre(4)">Crime</li>
+            <li style="color: #DDDDDD; display: inline-block; height: 2em; line-height: 2em; vertical-align: middle;" 
+                class=" genrebutton" ng-click="switchOnGenre(5)">Comedy</li>
+            <li style="color: #DDDDDD; display: inline-block; height: 2em; line-height: 2em; vertical-align: middle;" 
+                class=" genrebutton" ng-click="switchOnGenre(6)">Drama</li>
+            <li style="color: #DDDDDD; display: inline-block; height: 2em; line-height: 2em; vertical-align: middle;" 
+                class=" genrebutton" ng-click="switchOnGenre(7)">Musical</li>
+            <li style="color: #DDDDDD; display: inline-block; height: 2em; line-height: 2em; vertical-align: middle;" 
+                class=" genrebutton" ng-click="switchOnGenre(8)">Mystery</li>
+            <li style="color: #DDDDDD; display: inline-block; height: 2em; line-height: 2em; vertical-align: middle;" 
+                class=" genrebutton" ng-click="switchOnGenre(9)">Romance</li>
+            <li style="color: #DDDDDD; display: inline-block; height: 2em; line-height: 2em; vertical-align: middle;" 
+                class=" genrebutton" ng-click="switchOnGenre(10)">Sci-Fi</li>
+            <li style="color: #DDDDDD; display: inline-block; height: 2em; line-height: 2em; vertical-align: middle;" 
+                class=" genrebutton" ng-click="switchOnGenre(11)">Thriller</li>
+            <li style="color: #DDDDDD; display: inline-block; height: 2em; line-height: 2em; vertical-align: middle;" 
+                class=" genrebutton" ng-click="switchOnGenre(12)">Western</li>
+        </ul>
+        <ul style="margin-top:10px;" class="small-block-grid-3 medium-block-grid-4 large-block-grid-5">
+            <li ng-repeat="movie in movieData | filter: {genre : movieGenre}">
+                <img ng-click="showDetail(movie.imdbID)" class = "th" ng-src="../data/images/{{movie.imdbID}}.jpg" width=150 height=203.5>  
+            </li>
+        </ul>
+    </div>
+</div>
+
+            <!--<li ng-click="switchOnGenre(1)"><a href="#" class="button radius">All</a></li>
+            <li ng-click="switchOnGenre(2)"><a href="#" class="button radius">Action</a></li>
+            <li ng-click="switchOnGenre(3)"><a href="#" class="button radius">Adventure</a></li>
+            <li ng-click="switchOnGenre(4)"><a href="#" class="button radius">Crime</a></li>
+            <li ng-click="switchOnGenre(5)"><a href="#" class="button radius">Comedy</a></li>
+            <li ng-click="switchOnGenre(6)"><a href="#" class="button radius">Drama</a></li>
+            <li ng-click="switchOnGenre(7)"><a href="#" class="button radius">Musical</a></li>
+            <li ng-click="switchOnGenre(8)"><a href="#" class="button radius">Mystery</a></li>
+            <li ng-click="switchOnGenre(9)"><a href="#" class="button radius">Romance</a></li>
+            <li ng-click="switchOnGenre(10)"><a href="#" class="button radius">Sci-Fi</a></li>
+            <li ng-click="switchOnGenre(11)"><a href="#" class="button radius">Thriller</a></li>
+            <li ng-click="switchOnGenre(12)"><a href="#" class="button radius">Western</a></li>
+
+            <li class="button radius genrebutton" ng-click="switchOnGenre(1)">All</li>
+            <li class="button radius genrebutton" ng-click="switchOnGenre(2)">Action</li>
+            <li class="button radius genrebutton" ng-click="switchOnGenre(3)">Adventure</li>
+            <li class="button radius genrebutton" ng-click="switchOnGenre(4)">Crime</li>
+            <li class="button radius genrebutton" ng-click="switchOnGenre(5)">Comedy</li>
+            <li class="button radius genrebutton" ng-click="switchOnGenre(6)">Drama</li>
+            <li class="button radius genrebutton" ng-click="switchOnGenre(7)">Musical</li>
+            <li class="button radius genrebutton" ng-click="switchOnGenre(8)">Mystery</li>
+            <li class="button radius genrebutton" ng-click="switchOnGenre(9)">Romance</li>
+            <li class="button radius genrebutton" ng-click="switchOnGenre(10)">Sci-Fi</li>
+            <li class="button radius genrebutton" ng-click="switchOnGenre(11)">Thriller</li>
+            <li class="button radius genrebutton" ng-click="switchOnGenre(12)">Western</li>-->

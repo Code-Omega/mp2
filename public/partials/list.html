@@ -1,0 +1,26 @@
+    <!--<div ng-app = "movieApp">-->
+    <div class="row" ng-controller="movieController">
+        <div class="panel small-centered columns small-12 medium-11 radius">
+            <div ng-controller="sortController">
+                <select ng-model="sortOption" class="sortSelect">
+                    <option ng-repeat="option in options" value="{{option}}">Search and sort by: {{option}}</option>
+                </select>
+                <input class="queryinput" id="nameInput" ng-model="query" placeholder={{sortTypeName}} autofocus>
+                <form style="text-align:center;">
+                    <input type="radio"  ng-model="isreverse">Ascending &nbsp&nbsp&nbsp&nbsp
+                    <input type="radio" value=true ng-model="isreverse">Descending
+                </form>
+                <ul>
+                    <li ng-repeat="movie in movieData | swapFilter: sortOption : query | orderBy:sortOption:isreverse" ng-class-odd="'odd'" ng-class-even="'even'">
+                        <div class="row" ng-click="showDetail(movie.imdbID)">
+                            <div class="small-6 large-6 columns" style="text-align:right; right: 5%;">
+                                <img ng-src="../data/images/{{movie.imdbID}}.jpg" width=150 height=203.5>
+                            </div>
+                            <div class="small-6 large-6 columns"><p style="display:inline; font-size:2em; word-wrap: break-word;"><br>{{movie.title}}</p></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--</div>-->

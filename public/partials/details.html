@@ -1,0 +1,36 @@
+    <div class="row" ng-controller="movieController">
+        <div class="panel small-centered columns small-12 medium-11 radius">
+            <div ng-controller="sortController">
+                <ul>
+                    <li ng-repeat="movie in movieData | filter: {imdbID: movieID}">
+                        <div ng-controller="detailController">
+                        <div class="row">
+                            <div ng-click="leftInRank()" class="small-1 large-1 columns"><i class="fa fa-arrow-left fa-lg imdbArrow"></i></div>
+                            <div class="small-5 large-5 columns"><img ng-src="../data/images/{{movie.imdbID}}.jpg" width=200 height=271.34></div>
+                            <div class="small-5 large-5 columns"><p style="display:inline; font-size:2em; word-wrap: break-word;">{{movie.title}}</p></div>
+                            <div ng-click="rightInRank()" class="small-1 large-1 columns"><i class="fa fa-arrow-right fa-lg imdbArrow"></i></div>
+                        </div>
+                        <div class="row">
+                            <div class="small-3 large-3 columns"><p style="font-size:1em;">
+                                Rank: <br>
+                                Release Time: <br>
+                                IMDB Rating: <br>
+                                Runtime: <br>
+                                Awards: <br>
+                            </p></div>
+                            <div class="small-3 large-3 columns"><p style="font-size:1em; word-wrap: break-word;">
+                                {{movie.rank}}<br>
+                                {{movie.released}}<br>
+                                {{movie.imdbRating}}<br>
+                                {{movie.runtime}}<br>
+                                {{movie.awards}}<br>
+                            </p></div>
+                            <div class="small-6 large-6 columns"><p style="font-size:1em;"> &nbsp&nbsp PLOT:<br>{{movie.plot}}</p></div>
+                        </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            
+        </div>
+    </div>
