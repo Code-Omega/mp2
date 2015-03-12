@@ -28,7 +28,7 @@
         </ul>
         <ul style="margin-top:10px;" class="small-block-grid-3 medium-block-grid-4 large-block-grid-5">
             <li ng-repeat="movie in movieData | filter: {genre : movieGenre}">
-                <img ng-click="showDetail(movie.imdbID)" class = "th" ng-src="../data/images/{{movie.imdbID}}.jpg" width=150 height=203.5>  
+                <img ng-click="showDetail(movie.imdbID)" class = "th" ng-src="./data/images/{{movie.imdbID}}.jpg" width=150 height=203.5>  
             </li>
         </ul>
     </div>
